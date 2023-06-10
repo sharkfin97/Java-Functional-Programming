@@ -26,6 +26,11 @@ public class FPQ1Execises {
                 .filter(course -> course.length() >= 4)
                 .forEach(System.out::println);
 
+        //print the number of characters in each course name
+        courses.stream()
+                .map(String::length)
+                .forEach(System.out::println);
+
 
     }
 

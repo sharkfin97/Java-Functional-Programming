@@ -11,6 +11,8 @@ public class FPQ1Structured {
 
         printAllNumbersInListStructure(list);
         printAllNumbersInListLamba(list);
+
+        printAllSquareOfEvenInListLamba(list);
     }
 
     private static boolean isEven(int number){
@@ -26,6 +28,13 @@ public class FPQ1Structured {
     private static void printAllNumbersInListLamba(List<Integer> list) {
         list.stream()
                 .filter(number -> number % 2 == 0) // Lambda expression
+                .forEach(System.out::println);
+    }
+
+    private static void printAllSquareOfEvenInListLamba(List<Integer> list) {
+        list.stream()
+                .filter(number -> number % 2 == 0) // Lambda expression
+                .map(number -> number * number)
                 .forEach(System.out::println);
     }
 }
