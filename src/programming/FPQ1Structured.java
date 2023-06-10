@@ -10,7 +10,7 @@ public class FPQ1Structured {
                 .collect(Collectors.toList());
 
         printAllNumbersInListStructure(list);
-
+        printAllNumbersInListLamba(list);
     }
 
     private static boolean isEven(int number){
@@ -20,6 +20,12 @@ public class FPQ1Structured {
     private static void printAllNumbersInListStructure(List<Integer> list) {
         list.stream()
                 .filter(FPQ1Structured::isEven) // filter allow only even number
+                .forEach(System.out::println);
+    }
+
+    private static void printAllNumbersInListLamba(List<Integer> list) {
+        list.stream()
+                .filter(number -> number % 2 == 0) // Lambda expression
                 .forEach(System.out::println);
     }
 }
