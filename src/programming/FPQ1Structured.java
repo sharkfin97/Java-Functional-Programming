@@ -13,12 +13,13 @@ public class FPQ1Structured {
 
     }
 
-    public static void print(int number){
-        System.out.println(number);
+    private static boolean isEven(int number){
+        return number % 2 == 0;
     }
 
     private static void printAllNumbersInListStructure(List<Integer> list) {
         list.stream()
-                .forEach(FPQ1Structured::print);
+                .filter(FPQ1Structured::isEven) // filter allow only even number
+                .forEach(System.out::println);
     }
 }
